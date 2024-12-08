@@ -3,35 +3,35 @@ package model;
 import java.util.ArrayList;
 
 public class QuizRepository {
-    private ArrayList<Quiz> quizList; // クイズを格納するリスト
+	private ArrayList<Quiz> quizList; // クイズを格納するリスト
 
-    // コンストラクタ
-    public QuizRepository() {
-        quizList = new ArrayList<>();
-        initializeQuizzes(); // クイズの初期化
-    }
+	// コンストラクタ
+	public QuizRepository() {
+		quizList = new ArrayList<>();
+		initializeQuizzes(); // クイズの初期化
+	}
 
-    // クイズをリストに追加
-    public void addQuiz(Quiz quiz) {
-        quizList.add(quiz);
-    }
+	// クイズをリストに追加
+	public void addQuiz(Quiz quiz) {
+		quizList.add(quiz);
+	}
 
-    // 指定されたインデックスのクイズを取得
-    public Quiz getQuiz(int index) {
-        if (index >= 0 && index < quizList.size()) {
-            return quizList.get(index);
-        } else {
-            return null;
-        }
-    }
+	// 指定されたインデックスのクイズを取得
+	public Quiz getQuiz(int index) {
+		if (index >= 0 && index < quizList.size()) {
+			return quizList.get(index);
+		} else {
+			return null;
+		}
+	}
 
-    // クイズの総数を取得
-    public int getQuizCount() {
-        return quizList.size();
-    }
+	// クイズの総数を取得
+	public int getQuizCount() {
+		return quizList.size();
+	}
 
-    // クイズの初期化
-    private void initializeQuizzes() {
+	// クイズの初期化
+	private void initializeQuizzes() {
         // サンプルクイズを追加
         addQuiz(new Quiz("１＋１は？", new String[] {
             "１",
@@ -47,6 +47,11 @@ public class QuizRepository {
             ".py"
         }, 1));
 
+//        String question = "最近炎上した芸人は？";
+//        String[] options = {"フワちゃん", "草薙剛", "海老蔵", "ピエール瀧"};
+//        int currectNum = 1;
+//        Quiz quiz = new Quiz(question, options, currectNum);
+//        addQuiz(quiz);
         addQuiz(new Quiz("最近炎上した芸人は？", new String[] {
             "フワちゃん",
             "草薙剛",
